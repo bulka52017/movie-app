@@ -1,3 +1,6 @@
+import React from "react";
+import { useQueries } from "react-query";
+
 import {
   Alert,
   Box,
@@ -8,15 +11,13 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
-import { useQueries } from "react-query";
 
 import { ALL_SERVICES } from "./api/mockData/mockData";
 import { fetchMovies } from "./api/movies/api";
-import "./App.css";
 
 import CategorySelect from "./components/CategorySelect/CategorySelect";
 import MoviesListItem from "./components/MoviesListItem/MoviesListItem";
+import "./App.css";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = React.useState<string>("");
